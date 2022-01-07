@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>基本数据类型 | 小龙学习笔记📒</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="Live and Study.">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.7b1ca6aa.js" as="script"><link rel="preload" href="/assets/js/2.61be8c1d.js" as="script"><link rel="preload" href="/assets/js/11.c8e81ad0.js" as="script"><link rel="prefetch" href="/assets/js/10.4d36854c.js"><link rel="prefetch" href="/assets/js/12.6b94f071.js"><link rel="prefetch" href="/assets/js/13.b3997af6.js"><link rel="prefetch" href="/assets/js/14.12655d27.js"><link rel="prefetch" href="/assets/js/15.8c934424.js"><link rel="prefetch" href="/assets/js/16.89f52fbf.js"><link rel="prefetch" href="/assets/js/17.6fd6ccdd.js"><link rel="prefetch" href="/assets/js/18.0a91c368.js"><link rel="prefetch" href="/assets/js/19.54d46774.js"><link rel="prefetch" href="/assets/js/20.b11f5d94.js"><link rel="prefetch" href="/assets/js/21.d5f4d77f.js"><link rel="prefetch" href="/assets/js/3.92bcaf65.js"><link rel="prefetch" href="/assets/js/4.5d5f065e.js"><link rel="prefetch" href="/assets/js/5.b83755f7.js"><link rel="prefetch" href="/assets/js/6.0b5f2d4d.js"><link rel="prefetch" href="/assets/js/7.c8e9d3ea.js"><link rel="prefetch" href="/assets/js/8.9e4e4d6f.js"><link rel="prefetch" href="/assets/js/9.ce19f3b1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">小龙学习笔记📒</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/backend/" class="nav-link router-link-active">
+  后端
+</a></div><div class="nav-item"><a href="/computerNetwork/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blockChain/" class="nav-link">
+  区块链
+</a></div><div class="nav-item"><a href="/operations/" class="nav-link">
+  运维
+</a></div><div class="nav-item"><a href="https://github.com/19-xiaogao/Note" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/backend/" class="nav-link router-link-active">
+  后端
+</a></div><div class="nav-item"><a href="/computerNetwork/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blockChain/" class="nav-link">
+  区块链
+</a></div><div class="nav-item"><a href="/operations/" class="nav-link">
+  运维
+</a></div><div class="nav-item"><a href="https://github.com/19-xiaogao/Note" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>GoLang</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>基础</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/backend/golang/base/base.html" class="sidebar-link">Go 变量和常量</a></li><li><a href="/backend/golang/base/基本数据类型.html" class="active sidebar-link">基本数据类型</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/backend/golang/base/基本数据类型.html#整型" class="sidebar-link">整型</a></li></ul></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="基本数据类型"><a href="#基本数据类型" class="header-anchor">#</a> 基本数据类型</h1> <p>Go 语言中有丰富的数据类型，除了基本的整型、浮点型、布尔型、字符串外，还有数组、切片、结构体、函数、map、通道（channel）等。Go 语言的基本类型和其他语言大同小异。</p> <h2 id="整型"><a href="#整型" class="header-anchor">#</a> 整型</h2> <p>整型分为以下两个大类： 按长度分为：int8、int16、int32、int64 对应的无符号整型：uint8、uint16、uint32、uint64</p> <p>其中，uint8 就是我们熟知的 byte 型，int16 对应 C 语言中的 short 型，int64 对应 C 语言中的 long 型。</p> <table><thead><tr><th>类型</th> <th>描述</th></tr></thead> <tbody><tr><td>uint8</td> <td>无符号 8 位整型 (0 到 255)</td></tr> <tr><td>uint16</td> <td>无符号 16 位整型 (0 到 65535)</td></tr> <tr><td>uint32</td> <td>无符号 32 位整型 (0 到 4294967295)</td></tr> <tr><td>uint64</td> <td>无符号 64 位整型 (0 到 18446744073709551615)</td></tr> <tr><td>int8</td> <td>有符号 8 位整型 (-128 到 127)</td></tr> <tr><td>int16</td> <td>有符号 16 位整型 (-32768 到 32767)</td></tr> <tr><td>int32</td> <td>有符号 32 位整型 (-2147483648 到 2147483647)</td></tr> <tr><td>int64</td> <td>有符号 64 位整型 (-9223372036854775808 到 9223372036854775807)</td></tr></tbody></table> <p><strong>特殊整型</strong></p> <table><thead><tr><th>类型</th> <th>描述</th></tr></thead> <tbody><tr><td>类型</td> <td>描述</td></tr> <tr><td>uint</td> <td>32 位操作系统上就是 uint32，64 位操作系统上就是 uint64</td></tr> <tr><td>int</td> <td>32 位操作系统上就是 int32，64 位操作系统上就是 int64</td></tr> <tr><td>uintptr</td> <td>无符号整型，用于存放一个指针</td></tr></tbody></table> <p><strong>注意</strong>： 在使用 int 和 uint 类型时，不能假定它是 32 位或 64 位的整型，而是考虑 int 和 uint 可能在不同平台上的差异。</p> <p><strong>注意事项</strong> 获取对象的长度的内建 len()函数返回的长度可以根据不同平台的字节长度进行变化。实际使用中，切片或 map 的元素数量等都可以用 int 来表示。在涉及到二进制传输、读写文件的结构描述时，为了保持文件的结构不会受到不同编译目标平台字节长度的影响，不要使用 int 和 uint。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/backend/golang/base/base.html" class="prev">
+        Go 变量和常量
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7b1ca6aa.js" defer></script><script src="/assets/js/2.61be8c1d.js" defer></script><script src="/assets/js/11.c8e81ad0.js" defer></script>
+  </body>
+</html>

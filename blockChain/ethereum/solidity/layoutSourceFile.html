@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Solidity 源文件布局 | 小龙学习笔记📒</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="Live and Study.">
+    
+    <link rel="preload" href="/assets/css/0.styles.e4d8b86b.css" as="style"><link rel="preload" href="/assets/js/app.7b1ca6aa.js" as="script"><link rel="preload" href="/assets/js/2.61be8c1d.js" as="script"><link rel="preload" href="/assets/js/15.8c934424.js" as="script"><link rel="prefetch" href="/assets/js/10.4d36854c.js"><link rel="prefetch" href="/assets/js/11.c8e81ad0.js"><link rel="prefetch" href="/assets/js/12.6b94f071.js"><link rel="prefetch" href="/assets/js/13.b3997af6.js"><link rel="prefetch" href="/assets/js/14.12655d27.js"><link rel="prefetch" href="/assets/js/16.89f52fbf.js"><link rel="prefetch" href="/assets/js/17.6fd6ccdd.js"><link rel="prefetch" href="/assets/js/18.0a91c368.js"><link rel="prefetch" href="/assets/js/19.54d46774.js"><link rel="prefetch" href="/assets/js/20.b11f5d94.js"><link rel="prefetch" href="/assets/js/21.d5f4d77f.js"><link rel="prefetch" href="/assets/js/3.92bcaf65.js"><link rel="prefetch" href="/assets/js/4.5d5f065e.js"><link rel="prefetch" href="/assets/js/5.b83755f7.js"><link rel="prefetch" href="/assets/js/6.0b5f2d4d.js"><link rel="prefetch" href="/assets/js/7.c8e9d3ea.js"><link rel="prefetch" href="/assets/js/8.9e4e4d6f.js"><link rel="prefetch" href="/assets/js/9.ce19f3b1.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e4d8b86b.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">小龙学习笔记📒</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/computerNetwork/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blockChain/" class="nav-link router-link-active">
+  区块链
+</a></div><div class="nav-item"><a href="/operations/" class="nav-link">
+  运维
+</a></div><div class="nav-item"><a href="https://github.com/19-xiaogao/Note" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/web/" class="nav-link">
+  前端
+</a></div><div class="nav-item"><a href="/backend/" class="nav-link">
+  后端
+</a></div><div class="nav-item"><a href="/computerNetwork/" class="nav-link">
+  计算机网络
+</a></div><div class="nav-item"><a href="/blockChain/" class="nav-link router-link-active">
+  区块链
+</a></div><div class="nav-item"><a href="/operations/" class="nav-link">
+  运维
+</a></div><div class="nav-item"><a href="https://github.com/19-xiaogao/Note" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>以太坊</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blockChain/ethereum/ethereum.html" class="sidebar-link">介绍</a></li><li><a href="/blockChain/ethereum/wallet.html" class="sidebar-link">钱包</a></li><li><section class="sidebar-group collapsable is-sub-group depth-1"><p class="sidebar-heading open"><span>solidity</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/blockChain/ethereum/solidity/solidity.html" class="sidebar-link">介绍</a></li><li><a href="/blockChain/ethereum/solidity/layoutSourceFile.html" aria-current="page" class="active sidebar-link">Solidity 源文件布局</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blockChain/ethereum/solidity/layoutSourceFile.html#spdx-许可证标识" class="sidebar-link">SPDX 许可证标识</a></li><li class="sidebar-sub-header"><a href="/blockChain/ethereum/solidity/layoutSourceFile.html#pragmas" class="sidebar-link">Pragmas</a></li><li class="sidebar-sub-header"><a href="/blockChain/ethereum/solidity/layoutSourceFile.html#version-pragma" class="sidebar-link">Version Pragma</a></li><li class="sidebar-sub-header"><a href="/blockChain/ethereum/solidity/layoutSourceFile.html#导入其他源文件" class="sidebar-link">导入其他源文件</a></li></ul></li><li><a href="/blockChain/ethereum/solidity/StructureContract.html" class="sidebar-link">contract 的结构</a></li></ul></section></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="solidity-源文件布局"><a href="#solidity-源文件布局" class="header-anchor">#</a> Solidity 源文件布局</h1> <p>源文件可以包含任意数量的 <code>合约定义</code>,<code>导入指令</code>, <code>pragma 指令</code>和<code>struct</code>,<code>enum</code>,<code>function</code>,<code>error</code>和常量变量定义。</p> <h2 id="spdx-许可证标识"><a href="#spdx-许可证标识" class="header-anchor">#</a> SPDX 许可证标识</h2> <p>如果他们的源代码可用，则可以更好地建立对智能合约的信任。由于提供源代码总是会涉及版权方面的法律问题，因此 Solidity 编译器鼓励使用机器可读的 SPDX 许可证标识符。每个源文件都应以指示其许可证的注释开头：</p> <div class="language-solc extra-class"><pre class="language-text"><code>// SPDX-License-Identifier: MIT
+</code></pre></div><p>如果不想指定许可证或代码不是开源，请使用特殊值<code>UNLICENSED</code>。</p> <h2 id="pragmas"><a href="#pragmas" class="header-anchor">#</a> Pragmas</h2> <p>该 <code>pragma</code> 关键字用于启用某些编译器功能或检查。pragma 指令始终位于源文件的本地，因此如果要在整个项目中启用它，则必须将 pragma 添加到所有文件中。</p> <h2 id="version-pragma"><a href="#version-pragma" class="header-anchor">#</a> Version Pragma</h2> <p>文件可以（并且应该）使用版本编译指示进行注释，以拒绝使用可能引入不兼容更改的未来编译器版本进行编译。我们试图将这些保持在绝对最低限度，并以语义变化也需要语法变化的方式引入它们，但这并不总是可行的。因此，至少对于包含重大更改的版本，通读更改日志总是一个好主意。这些版本始终具有以下形式的版本 0.x.0 或 x.0.0. 使用语法跟 npm 语法一样。</p> <h2 id="导入其他源文件"><a href="#导入其他源文件" class="header-anchor">#</a> 导入其他源文件</h2> <p>Solidity 支持 import 语句来帮助模块化你的代码，这些代码类似于 JavaScript 中可用的代码（从 ES6 开始）。但是，Solidity 不支持默认导出的概念。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token string">&quot;filename&quot;</span><span class="token punctuation">;</span>
+</code></pre></div><p>该 filename 部分称为导入路径。该语句将所有全局符号从“文件名”（以及在那里导入的符号）导入到当前的全局作用域中（与 ES6 不同，但向后兼容 Solidity）。不推荐使用这种形式，因为它不可预测地污染了命名空间。如果您在“文件名”中添加新的顶级项目，它们会自动出现在所有像这样从“文件名”导入的文件中。最好明确导入特定符号。</p> <p>下面的示例创建一个新的全局符号，symbolName 其成员是来自 的所有全局符号&quot;filename&quot;：</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">as</span> symbolName <span class="token keyword">from</span> <span class="token string">&quot;filename&quot;</span><span class="token punctuation">;</span>
+
+<span class="token comment">// or</span>
+<span class="token keyword">import</span> <span class="token string">&quot;filename&quot;</span> <span class="token keyword">as</span> symbolName<span class="token punctuation">;</span>
+</code></pre></div><p>如果存在命名冲突，您可以在导入时重命名符号。</p> <div class="language-js extra-class"><pre class="language-js"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> symbol1 <span class="token keyword">as</span> alias<span class="token punctuation">,</span> symbol2 <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">&quot;filename&quot;</span><span class="token punctuation">;</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blockChain/ethereum/solidity/solidity.html" class="prev">
+        介绍
+      </a></span> <span class="next"><a href="/blockChain/ethereum/solidity/StructureContract.html">
+        contract 的结构
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7b1ca6aa.js" defer></script><script src="/assets/js/2.61be8c1d.js" defer></script><script src="/assets/js/15.8c934424.js" defer></script>
+  </body>
+</html>
